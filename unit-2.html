@@ -3,113 +3,275 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Unit 2 English revision for 2n ESO: Present Simple, Present Continuous, stative verbs and tag questions.">
-  <title>English 2n ESO · Unit 2</title>
+  <meta name="description" content="Unit 2 d'anglès per a 2n d'ESO: contrast entre Present Simple i Present Continuous, stative verbs i tag questions, amb bastides i pràctica autocorrectiva.">
+  <title>English 2n ESO - Unit 2</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
-<body>
-  <header class="hero">
-    <nav aria-label="Navegació principal">
+<body class="unit-page">
+  <a class="skip-link" href="#main-content">Ves al contingut</a>
+
+  <header class="u2-hero" id="top">
+    <nav class="site-nav" aria-label="Navegació principal">
       <a class="brand" href="index.html">English<span>2ESO</span></a>
       <div class="nav-links">
-        <a href="index.html">Totes les unitats</a><a href="#route">Ruta</a><a href="#learn">Aprèn</a><a href="#practice">Practica</a><a href="#resources">Recursos</a>
+        <a href="#contrast">Present tenses</a>
+        <a href="#stative">Stative verbs</a>
+        <a href="#tags">Tag questions</a>
+        <a href="#practice">Pràctica</a>
       </div>
     </nav>
-    <div class="hero-content" id="top">
-      <p class="eyebrow">UNIT 2 · GRAMMAR LAB</p>
-      <h1>Entén la gramàtica.<br><em>Use it with confidence.</em></h1>
-      <p>Explicacions clares, exemples i pràctica al teu ritme per a 2n d'ESO.</p>
-      <a class="button" href="#learn">Comença a repassar ↓</a>
+
+    <div class="u2-hero-inner">
+      <div class="u2-hero-copy">
+        <p class="unit-kicker">Unit 2 - Grammar</p>
+        <h1>Present tenses i <em>tag questions</em></h1>
+        <p class="hero-lead">Aprèn a decidir quin temps verbal necessites, reconeix els verbs que normalment no van en Continuous i construeix preguntes de confirmació.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contrast">Comença per l'explicació</a>
+          <a class="button secondary" href="#practice">Ves directament a practicar</a>
+        </div>
+      </div>
+
+      <aside class="hero-goals" aria-label="Objectius de la unitat">
+        <p class="card-label">En acabar podràs...</p>
+        <ul>
+          <li>distingir rutina, acció en curs i situació temporal;</li>
+          <li>descriure què passa en una fotografia;</li>
+          <li>evitar el Continuous amb els <em>stative verbs</em> més habituals;</li>
+          <li>formar <em>tag questions</em> amb l'auxiliar i el pronom correctes.</li>
+        </ul>
+      </aside>
     </div>
   </header>
 
-  <main>
-    <section class="section study-route" id="route">
-      <div class="section-heading"><p class="eyebrow">LA TEVA RUTA</p><h2>Què necessites avui?</h2><p>Tria un itinerari segons el temps que tens. No cal fer-ho tot de cop.</p></div>
-      <div class="route-grid">
-        <a href="#quick-guide"><span>⚡ 5 min</span><h3>Repàs exprés</h3><p>Llegeix la guia ràpida i memoritza els senyals.</p><b>Comença →</b></a>
-        <a href="#learn"><span>📚 15 min</span><h3>Ho vull entendre</h3><p>Repassa les explicacions i obre els trucs.</p><b>Comença →</b></a>
-        <a href="#practice"><span>🎯 20 min</span><h3>Em vull posar a prova</h3><p>Completa els tres nivells i revisa els errors.</p><b>Comença →</b></a>
+  <main id="main-content">
+    <section class="u2-section route-section" aria-labelledby="route-title">
+      <div class="section-heading compact">
+        <p class="section-label">Bastida inicial</p>
+        <h2 id="route-title">Com ho treballarem</h2>
+        <p>Quan tinguis dubtes, segueix aquest recorregut i torna al pas que necessitis.</p>
+      </div>
+      <div class="learning-route">
+        <article><span>1</span><h3>Detecta la pista</h3><p>Busca paraules com <em>usually</em>, <em>now</em> o <em>today</em> i pensa què vol dir la frase.</p></article>
+        <article><span>2</span><h3>Decideix el significat</h3><p>Pregunta't si parles d'una rutina, d'una acció en curs o d'un estat.</p></article>
+        <article><span>3</span><h3>Construeix la forma</h3><p>Comprova el subjecte, l'auxiliar i la terminació del verb abans de respondre.</p></article>
+        <article><span>4</span><h3>Revisa la frase sencera</h3><p>Llegeix-la una altra vegada i comprova si la forma escollida encaixa amb el significat.</p></article>
       </div>
     </section>
 
-    <section class="section" id="learn">
-      <div class="section-heading"><p class="eyebrow">01 · LEARN</p><h2>Primer, entenem-ho</h2></div>
+    <section class="u2-section" id="contrast" aria-labelledby="contrast-title">
+      <div class="section-heading">
+        <p class="section-label">Part 1</p>
+        <h2 id="contrast-title">Present Simple o Present Continuous?</h2>
+        <p>La clau no és només la forma del verb. Primer has d'entendre què està explicant la frase.</p>
+      </div>
 
-      <article class="lesson-card green">
-        <div class="lesson-title"><span>01</span><div><p>CONTRAST</p><h3>Present Simple <i>vs</i> Present Continuous</h3></div></div>
-        <div class="comparison">
-          <div><h4>Present Simple</h4><p class="use">Hàbits, rutines i fets habituals</p><p class="formula">subject + verb <b>(+ s/es)</b></p><p class="example">I <strong>usually eat</strong> at home.</p><p class="example">The policeman <strong>follows</strong> the criminal.</p><div class="signals"><span>always</span><span>usually</span><span>every day</span><span>often</span></div></div>
-          <div><h4>Present Continuous</h4><p class="use">Accions que passen ara o situacions temporals</p><p class="formula">subject + <b>am/is/are + -ing</b></p><p class="example">Today I<strong>'m eating</strong> at a restaurant.</p><p class="example">In the picture, he <strong>is playing</strong>.</p><div class="signals"><span>now</span><span>at the moment</span><span>today</span><span>Look!</span></div></div>
+      <div class="tense-grid">
+        <article class="grammar-card simple-card">
+          <div class="grammar-card-head"><span class="grammar-badge">Present Simple</span><strong>Rutines i fets habituals</strong></div>
+          <p>Fes-lo servir per parlar del que passa habitualment i per explicar la trama d'una història, un llibre o una pel·lícula.</p>
+          <div class="formula-box"><span>Forma bàsica</span><code>I/you/we/they + verb<br>he/she/it + verb-s</code></div>
+          <div class="example-stack">
+            <p><b>I usually walk</b> to school.</p>
+            <p>In the film, the detective <b>finds</b> a clue and <b>opens</b> the door.</p>
+          </div>
+          <div class="signal-list"><span>usually</span><span>often</span><span>every day</span><span>on Mondays</span></div>
+        </article>
+
+        <article class="grammar-card continuous-card">
+          <div class="grammar-card-head"><span class="grammar-badge">Present Continuous</span><strong>Accions en curs i situacions temporals</strong></div>
+          <p>Fes-lo servir per explicar què passa ara, què està passant durant un període temporal o què veiem en una fotografia.</p>
+          <div class="formula-box"><span>Forma bàsica</span><code>am / is / are + verb-ing</code></div>
+          <div class="example-stack">
+            <p>Be quiet! Leo <b>is studying</b>.</p>
+            <p>In this photo, my friends <b>are playing</b> volleyball.</p>
+          </div>
+          <div class="signal-list"><span>now</span><span>at the moment</span><span>today</span><span>this week</span></div>
+        </article>
+      </div>
+
+      <div class="scaffold-panel">
+        <div>
+          <p class="card-label">Com decideixo?</p>
+          <h3>Fes-te aquestes preguntes en ordre</h3>
         </div>
-        <details><summary>💡 Truc per decidir</summary><p>Pregunta't: «És una rutina o passa normalment?» → <b>Simple</b>. «Està passant ara o és temporal?» → <b>Continuous</b>.</p></details>
-      </article>
+        <ol class="decision-list">
+          <li><b>És una rutina o passa habitualment?</b> Tria Present Simple.</li>
+          <li><b>Està passant ara o és temporal?</b> Tria Present Continuous.</li>
+          <li><b>Descric una fotografia?</b> Imagina que l'acció passa davant teu i utilitza Present Continuous.</li>
+          <li><b>Explico la trama d'una història?</b> Utilitza Present Simple.</li>
+        </ol>
+      </div>
 
-      <article class="lesson-card coral">
-        <div class="lesson-title"><span>02</span><div><p>IMPORTANT EXCEPTION</p><h3>Stative verbs · verbs estàtics</h3></div></div>
-        <p>Alguns verbs expressen <b>estats</b>, no accions: gustos, sentiments, pensaments, possessió o percepció. Normalment no els posem en Present Continuous.</p>
-        <div class="word-groups">
-          <div><b>♥ Gustos</b><span>like · love · hate · prefer</span></div>
-          <div><b>☁ Ment</b><span>know · believe · understand · remember</span></div>
-          <div><b>◉ Sentits</b><span>see · hear · smell · taste</span></div>
-          <div><b>◆ Possessió</b><span>have · own · belong</span></div>
+      <div class="contrast-example" aria-label="Exemple de contrast">
+        <span class="mini-label">Mira el contrast</span>
+        <p>I <b>usually have</b> lunch at home, but today I <b>am eating</b> at my grandparents' house.</p>
+        <small><em>Usually</em> indica rutina. <em>Today</em> presenta una situació diferent i temporal.</small>
+      </div>
+
+      <details class="support-details">
+        <summary>Necessito ajuda amb la forma dels verbs</summary>
+        <div class="support-grid">
+          <div><b>He / she / it</b><p>En Present Simple, recorda la <strong>-s</strong>: <em>she plays</em>, <em>he watches</em>.</p></div>
+          <div><b>Present Continuous</b><p>No oblidis el verb <strong>be</strong>: <em>they are studying</em>, no <s>they studying</s>.</p></div>
         </div>
-        <div class="watch-out"><b>Watch out!</b><p><s>I'm knowing the answer.</s> → <strong>I know the answer.</strong></p><p>Alguns canvien de significat: <strong>I think</strong> your drawing is nice (opinió), però <strong>I'm thinking</strong> about travelling (reflexionant).</p></div>
-      </article>
-
-      <article class="lesson-card blue">
-        <div class="lesson-title"><span>03</span><div><p>CONFIRMATION</p><h3>Tag questions</h3></div></div>
-        <p>Una <i>tag question</i> és una pregunta curta al final d'una frase. Serveix per confirmar informació o buscar l'acord de l'altra persona.</p>
-        <div class="tag-rule"><div><span>Frase afirmativa</span><b>+</b><span>tag negativa</span></div><p>She likes this book, <strong>doesn't she?</strong></p></div>
-        <div class="tag-rule"><div><span>Frase negativa</span><b>+</b><span>tag afirmativa</span></div><p>They aren't sleeping, <strong>are they?</strong></p></div>
-        <table><thead><tr><th>Frase</th><th>Tag</th></tr></thead><tbody><tr><td>He is happy,</td><td>isn't he?</td></tr><tr><td>You have got a car,</td><td>haven't you?</td></tr><tr><td>She likes this book,</td><td>doesn't she?</td></tr><tr><td>We will be late,</td><td>won't we?</td></tr></tbody></table>
-        <details><summary>🧩 Com la construeixo?</summary><ol><li>Busca l'auxiliar: <i>is, have, does, will…</i></li><li>Canvia'l de positiu a negatiu (o a l'inrevés).</li><li>Repeteix el subjecte amb un pronom: <i>Anna → she; the boys → they</i>.</li></ol></details>
-      </article>
+      </details>
     </section>
 
-    <section class="quick-section" id="quick-guide">
-      <div class="quick-inner">
-        <div class="section-heading"><p class="eyebrow">QUICK GUIDE</p><h2>La chuleta de la Unit 2</h2><p>Tot el que has de recordar, en una sola mirada.</p></div>
-        <div class="cheat-grid">
-          <article><span class="number">01</span><h3>Routine?</h3><p><b>Present Simple</b></p><code>I play · She plays</code><small>always · often · every day</small></article>
-          <article><span class="number">02</span><h3>Right now?</h3><p><b>Present Continuous</b></p><code>am/is/are + -ing</code><small>now · today · Look!</small></article>
-          <article><span class="number">03</span><h3>State?</h3><p><b>Normalment Simple</b></p><code>I know · I like</code><small>think · love · understand</small></article>
-          <article><span class="number">04</span><h3>Confirmation?</h3><p><b>Tag question</b></p><code>+ sentence, − tag?</code><small>It's easy, isn't it?</small></article>
+    <section class="u2-section tinted" id="stative" aria-labelledby="stative-title">
+      <div class="section-heading">
+        <p class="section-label">Part 2</p>
+        <h2 id="stative-title"><em>Stative verbs</em> - verbs estàtics</h2>
+        <p>Alguns verbs descriuen un estat més que no pas una acció. Per això, normalment els fem servir en Present Simple.</p>
+      </div>
+
+      <div class="stative-grid">
+        <article><span>Gustos i sentiments</span><p>like, love, hate, prefer, want</p></article>
+        <article><span>Ment i opinió</span><p>know, believe, understand, remember, think</p></article>
+        <article><span>Possessió</span><p>have, own, belong</p></article>
+        <article><span>Percepció</span><p>see, hear, smell, taste</p></article>
+      </div>
+
+      <div class="meaning-switch">
+        <div>
+          <p class="card-label">Atenció al significat</p>
+          <h3>El mateix verb pot canviar</h3>
+          <p>Quan un <em>stative verb</em> apareix en Continuous, sovint és perquè el significat ha passat d'estat a activitat.</p>
+        </div>
+        <div class="switch-examples">
+          <p><span>Opinió</span><b>I think</b> this exercise is easy.</p>
+          <p><span>Activitat mental ara</span><b>I'm thinking</b> about joining the school band.</p>
+        </div>
+      </div>
+
+      <div class="error-check">
+        <div><span class="wrong-mark">✕</span><p><s>I'm knowing the answer.</s></p></div>
+        <div><span class="right-mark">✓</span><p><b>I know the answer.</b></p></div>
+        <small><em>Know</em> expressa un estat mental. En aquest significat, fem servir Present Simple.</small>
+      </div>
+
+      <details class="support-details">
+        <summary>Com puc saber si és un verb estàtic?</summary>
+        <p>Pregunta't si el verb descriu una acció que pots imaginar en progrés. Si expressa coneixement, gust, possessió o percepció com a estat, el Present Simple sol ser l'opció adequada.</p>
+      </details>
+    </section>
+
+    <section class="u2-section" id="tags" aria-labelledby="tags-title">
+      <div class="section-heading">
+        <p class="section-label">Part 3</p>
+        <h2 id="tags-title"><em>Tag questions</em></h2>
+        <p>Una <em>tag question</em> és una pregunta breu al final d'una frase. La fem servir per confirmar informació o buscar l'acord de l'altra persona.</p>
+      </div>
+
+      <div class="polarity-grid">
+        <article>
+          <span>Frase afirmativa</span>
+          <div class="polarity-flow"><b>+</b><strong>→</strong><b>− ?</b></div>
+          <p>She is tired, <b>isn't she?</b></p>
+        </article>
+        <article>
+          <span>Frase negativa</span>
+          <div class="polarity-flow"><b>−</b><strong>→</strong><b>+ ?</b></div>
+          <p>They aren't ready, <b>are they?</b></p>
+        </article>
+      </div>
+
+      <div class="build-tag">
+        <p class="card-label">Bastida pas a pas</p>
+        <h3>Construeix la <em>tag</em></h3>
+        <ol>
+          <li><span>1</span><div><b>Llegeix la frase sencera.</b><p>Decideix si és afirmativa o negativa.</p></div></li>
+          <li><span>2</span><div><b>Busca l'auxiliar.</b><p>Pot ser <em>is/are</em>, <em>have</em> o <em>will</em>. Amb Present Simple, utilitza <em>do/does</em>.</p></div></li>
+          <li><span>3</span><div><b>Canvia el signe.</b><p>Afirmativa → <em>tag</em> negativa. Negativa → <em>tag</em> afirmativa.</p></div></li>
+          <li><span>4</span><div><b>Canvia el subjecte per un pronom.</b><p><em>Emma → she</em>, <em>the students → they</em>, <em>the weather → it</em>.</p></div></li>
+        </ol>
+      </div>
+
+      <div class="tag-table-wrap">
+        <table class="tag-table">
+          <thead><tr><th>Frase</th><th><em>Tag question</em></th><th>Què reutilitzo?</th></tr></thead>
+          <tbody>
+            <tr><td>Leo is happy,</td><td><b>isn't he?</b></td><td><em>is</em></td></tr>
+            <tr><td>You have got a bike,</td><td><b>haven't you?</b></td><td><em>have</em></td></tr>
+            <tr><td>Marta likes this song,</td><td><b>doesn't she?</b></td><td><em>does</em></td></tr>
+            <tr><td>They are studying,</td><td><b>aren't they?</b></td><td><em>are</em></td></tr>
+            <tr><td>We will be on time,</td><td><b>won't we?</b></td><td><em>will</em></td></tr>
+            <tr><td>It isn't cold,</td><td><b>is it?</b></td><td><em>is</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tag-use-grid">
+        <article><p class="card-label">Confirmar</p><p>You're coming tomorrow, <b>aren't you?</b></p><small>Creus que la informació és certa i busques confirmació.</small></article>
+        <article><p class="card-label">Suavitzar el to</p><p>The weather is nice, <b>isn't it?</b></p><small>La pregunta fa que el comentari soni més proper i conversacional.</small></article>
+      </div>
+    </section>
+
+    <section class="quick-guide" id="quick-guide" aria-labelledby="quick-title">
+      <div class="quick-guide-inner">
+        <div class="section-heading inverse compact">
+          <p class="section-label">Guia ràpida</p>
+          <h2 id="quick-title">Abans de respondre, comprova això</h2>
+        </div>
+        <div class="quick-grid">
+          <article><span>Routine?</span><b>Present Simple</b><p><em>usually, often, every...</em></p></article>
+          <article><span>Right now or temporary?</span><b>Present Continuous</b><p><em>now, today, this week...</em></p></article>
+          <article><span>State?</span><b>Normalment Present Simple</b><p><em>know, like, understand, belong...</em></p></article>
+          <article><span>Confirmation?</span><b>Opposite <em>tag</em></b><p><em>It's easy, isn't it?</em></p></article>
         </div>
       </div>
     </section>
 
-    <section class="practice-section" id="practice">
-      <div class="section-heading"><p class="eyebrow">02 · PRACTICE</p><h2>Ara et toca a tu</h2><p>18 preguntes en tres nivells. Pots demanar una pista i el teu millor resultat queda desat.</p></div>
-      <div class="scoreboard" aria-label="Millors resultats"><span>La teva millor marca</span><div><b id="best-1">0/6</b><small>Nivell 1</small></div><div><b id="best-2">0/6</b><small>Nivell 2</small></div><div><b id="best-3">0/6</b><small>Repte</small></div></div>
-      <div class="level-tabs" role="tablist" aria-label="Nivell de dificultat">
-        <button class="tab active" data-level="1" role="tab">🌱 Nivell 1</button><button class="tab" data-level="2" role="tab">🚀 Nivell 2</button><button class="tab" data-level="3" role="tab">🏆 Repte</button>
+    <section class="practice-section" id="practice" aria-labelledby="practice-title">
+      <div class="practice-inner">
+        <div class="section-heading compact">
+          <p class="section-label">Pràctica autocorrectiva</p>
+          <h2 id="practice-title">Practica per blocs</h2>
+          <p>Tria què vols treballar. Pots demanar una pista abans de respondre i rebràs una explicació immediata.</p>
+        </div>
+
+        <div class="practice-tabs" role="tablist" aria-label="Bloc de pràctica">
+          <button class="practice-tab active" data-set="contrast" role="tab" aria-selected="true">Present tenses</button>
+          <button class="practice-tab" data-set="stative" role="tab" aria-selected="false">Stative verbs</button>
+          <button class="practice-tab" data-set="tags" role="tab" aria-selected="false">Tag questions</button>
+          <button class="practice-tab" data-set="mixed" role="tab" aria-selected="false">Mixed challenge</button>
+        </div>
+
+        <div class="score-strip" aria-label="Millors resultats">
+          <div><span>Present tenses</span><b id="best-contrast">0/6</b></div>
+          <div><span>Stative verbs</span><b id="best-stative">0/6</b></div>
+          <div><span>Tag questions</span><b id="best-tags">0/6</b></div>
+          <div><span>Mixed challenge</span><b id="best-mixed">0/6</b></div>
+        </div>
+
+        <div id="quiz" class="quiz-card" aria-live="polite"></div>
       </div>
-      <div id="quiz" class="quiz-card" aria-live="polite"></div>
     </section>
 
-    <section class="section" id="resources">
-      <div class="section-heading"><p class="eyebrow">03 · RESOURCES</p><h2>Més eines per aprendre</h2></div>
-      <div class="resource-grid">
-        <article class="error-clinic"><p class="eyebrow">ERROR CLINIC</p><h3>Detecta l'error típic</h3><div><s>She play tennis every day.</s><p><b>She plays</b> tennis every day.</p><small>Amb he/she/it, afegeix <b>-s</b>.</small></div><div><s>They are study now.</s><p>They <b>are studying</b> now.</p><small>Continuous = <b>be + verb-ing</b>.</small></div><div><s>You like pizza, do you?</s><p>You like pizza, <b>don't you?</b></p><small>Afirmativa → tag negativa.</small></div></article>
-        <article class="mini-dictionary"><p class="eyebrow">MINI DICTIONARY</p><h3>Paraules que t'ajuden</h3><dl><dt>habit</dt><dd>hàbit</dd><dt>routine</dt><dd>rutina</dd><dt>temporary</dt><dd>temporal</dd><dt>action</dt><dd>acció</dd><dt>state</dt><dd>estat</dd><dt>subject pronoun</dt><dd>pronom subjecte</dd><dt>auxiliary verb</dt><dd>verb auxiliar</dd><dt>agreement</dt><dd>acord / confirmació</dd></dl></article>
+    <section class="u2-section support-section" id="support" aria-labelledby="support-title">
+      <div class="section-heading compact">
+        <p class="section-label">Quan et bloquegis</p>
+        <h2 id="support-title">Torna a una pregunta concreta</h2>
       </div>
-      <div class="print-card">
-        <div><p class="eyebrow">OFFLINE MODE</p><h3>Fitxa de repàs imprimible</h3><p>Imprimeix les explicacions i els exemples per estudiar sense pantalla. El qüestionari interactiu s'oculta automàticament.</p></div>
-        <button class="print-button" id="print-page">🖨️ Imprimeix la fitxa</button>
+      <div class="support-question-grid">
+        <article><b>Quan passa?</b><p>Habitualment → Simple. Ara o temporalment → Continuous.</p></article>
+        <article><b>És un estat?</b><p>Si expressa coneixement, gust o possessió, comprova si és un <em>stative verb</em>.</p></article>
+        <article><b>Quin auxiliar hi ha?</b><p>A la <em>tag question</em>, reutilitza'l. Si és Present Simple, pensa en <em>do/does</em>.</p></article>
+        <article><b>La frase és positiva o negativa?</b><p>La <em>tag</em> ha de tenir la polaritat contrària.</p></article>
       </div>
-    </section>
 
-    <section class="section help" id="help">
-      <div class="section-heading"><p class="eyebrow">04 · SUPPORT</p><h2>Encara tens dubtes?</h2></div>
-      <div class="help-grid">
-        <article><span>1</span><h3>Busca la pista temporal</h3><p><i>Every day, usually</i> → Simple.<br><i>Now, at the moment</i> → Continuous.</p></article>
-        <article><span>2</span><h3>Mira l'auxiliar</h3><p>A les tag questions, reutilitza <i>is, have, will…</i> Si no n'hi ha, fes servir <i>do/does</i>.</p></article>
-        <article><span>3</span><h3>Equivocar-se ajuda</h3><p>Llegeix l'explicació després de cada resposta i torna-ho a provar. No hi ha límit d'intents.</p></article>
+      <div class="print-panel">
+        <div><p class="card-label">Per estudiar sense pantalla</p><h3>Imprimeix la guia de la unitat</h3><p>En imprimir, la pràctica interactiva s'oculta i queden les explicacions, les bastides i els exemples.</p></div>
+        <button class="print-button" id="print-page" type="button">Imprimeix la guia</button>
       </div>
     </section>
   </main>
-  <footer><b>English2ESO</b><p>Unit 2 · Grammar revision</p><a href="#top">Torna amunt ↑</a></footer>
+
+  <footer class="site-footer">
+    <div><b>English2ESO</b><span>Unit 2 - Grammar</span></div>
+    <a href="index.html">Totes les unitats</a>
+    <a href="#top">Torna amunt ↑</a>
+  </footer>
 </body>
 </html>
