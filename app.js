@@ -1,322 +1,60 @@
-const questionSets = {
-  contrast: {
-    label: 'Present tenses',
-    questions: [
-      {
-        q: 'My sister usually ___ to school, but today she ___ the bus.',
-        options: ['walks / is taking', 'is walking / takes', 'walk / is taking'],
-        answer: 0,
-        hint: 'Usually indica una rutina. Today presenta una situació diferent i temporal.',
-        explanation: 'Rutina → Present Simple: walks. Situació temporal d’avui → Present Continuous: is taking.'
-      },
-      {
-        q: 'Look! The dog ___ with your shoe.',
-        options: ['plays', 'is playing', 'play'],
-        answer: 1,
-        hint: 'Look! dirigeix l’atenció a una acció que passa ara mateix.',
-        explanation: 'Per a una acció en curs ara fem servir am/is/are + verb-ing: is playing.'
-      },
-      {
-        q: 'In this photo, our class ___ a science museum.',
-        options: ['visits', 'is visiting', 'visit'],
-        answer: 1,
-        hint: 'Quan descrivim una fotografia, expliquem l’escena com si passés ara.',
-        explanation: 'Per descriure què passa en una fotografia, fem servir Present Continuous: is visiting.'
-      },
-      {
-        q: 'In the story, the hero ___ a secret map and ___ the island.',
-        options: ['finds / reaches', 'is finding / is reaching', 'find / reach'],
-        answer: 0,
-        hint: 'La frase resumeix accions de la trama d’una història.',
-        explanation: 'Per explicar la trama d’un llibre o una pel·lícula utilitzem Present Simple: finds / reaches.'
-      },
-      {
-        q: 'This week I ___ at my aunt’s house.',
-        options: ['stay', 'am staying', 'stays'],
-        answer: 1,
-        hint: 'This week indica una situació limitada en el temps.',
-        explanation: 'Una situació temporal porta Present Continuous: am staying.'
-      },
-      {
-        q: 'We ___ English on Tuesdays.',
-        options: ['are having', 'has', 'have'],
-        answer: 2,
-        hint: 'On Tuesdays indica una rutina regular.',
-        explanation: 'Per a una rutina utilitzem Present Simple. Amb we, la forma és have.'
-      }
-    ]
-  },
-  stative: {
-    label: 'Stative verbs',
-    questions: [
-      {
-        q: 'I ___ the answer to question 4.',
-        options: ['am knowing', 'know', 'knowing'],
-        answer: 1,
-        hint: 'Know descriu un estat mental.',
-        explanation: 'Know és un stative verb. En aquest significat, fem servir Present Simple: I know.'
-      },
-      {
-        q: 'Nora ___ horror films.',
-        options: ['loves', 'is loving', 'love'],
-        answer: 0,
-        hint: 'Love expressa un gust o sentiment.',
-        explanation: 'Love normalment funciona com a stative verb: Nora loves horror films.'
-      },
-      {
-        q: 'Which sentence gives an opinion?',
-        options: ['I think this game is difficult.', 'I’m thinking about the problem.', 'I am think this game is difficult.'],
-        answer: 0,
-        hint: 'Think en Present Simple pot significar “opino”.',
-        explanation: 'I think... expressa una opinió. I’m thinking about... descriu una activitat mental en curs.'
-      },
-      {
-        q: 'I ___ about joining the basketball team.',
-        options: ['think', 'am thinking', 'thinks'],
-        answer: 1,
-        hint: 'Aquí think significa “m’estic plantejant / hi estic pensant”.',
-        explanation: 'Quan think descriu una activitat mental en curs, podem utilitzar Present Continuous: am thinking.'
-      },
-      {
-        q: 'This notebook ___ to Eric.',
-        options: ['is belonging', 'belongs', 'belong'],
-        answer: 1,
-        hint: 'Belong expressa possessió o pertinença.',
-        explanation: 'Belong és un stative verb. Amb this notebook fem servir belongs.'
-      },
-      {
-        q: 'Which sentence is correct?',
-        options: ['I’m understanding you now.', 'I understand you now.', 'I am understand you now.'],
-        answer: 1,
-        hint: 'Understand descriu un estat de comprensió.',
-        explanation: 'Understand normalment no s’utilitza en Continuous. La forma correcta és I understand you now.'
-      }
-    ]
-  },
-  tags: {
-    label: 'Tag questions',
-    questions: [
-      {
-        q: 'Emma is tired, ___?',
-        options: ['is she', 'isn’t she', 'doesn’t she'],
-        answer: 1,
-        hint: 'La frase és afirmativa i l’auxiliar és is.',
-        explanation: 'Frase afirmativa → tag negativa. Reutilitzem is i Emma es converteix en she: isn’t she?'
-      },
-      {
-        q: 'They aren’t at home, ___?',
-        options: ['aren’t they', 'are they', 'do they'],
-        answer: 1,
-        hint: 'La frase és negativa, així que la tag ha de ser afirmativa.',
-        explanation: 'Conservem l’auxiliar are, canviem la polaritat i mantenim they: are they?'
-      },
-      {
-        q: 'You have got a dog, ___?',
-        options: ['don’t you', 'haven’t you', 'have you'],
-        answer: 1,
-        hint: 'La frase ja conté l’auxiliar have.',
-        explanation: 'Amb have got reutilitzem have. Frase afirmativa → haven’t you?'
-      },
-      {
-        q: 'Leo plays basketball, ___?',
-        options: ['doesn’t he', 'isn’t he', 'does he'],
-        answer: 0,
-        hint: 'És Present Simple i no hi ha cap auxiliar escrit a la frase.',
-        explanation: 'Amb Present Simple fem servir do/does. Leo = he i la frase és afirmativa: doesn’t he?'
-      },
-      {
-        q: 'We won’t be late, ___?',
-        options: ['won’t we', 'will we', 'are we'],
-        answer: 1,
-        hint: 'Won’t ja és negatiu.',
-        explanation: 'Frase negativa → tag afirmativa. Reutilitzem will: will we?'
-      },
-      {
-        q: 'Your parents are working, ___?',
-        options: ['aren’t they', 'are they', 'don’t they'],
-        answer: 0,
-        hint: 'Busca l’auxiliar de la frase i canvia your parents per un pronom.',
-        explanation: 'L’auxiliar és are. Your parents = they. Frase afirmativa → aren’t they?'
-      }
-    ]
-  },
-  mixed: {
-    label: 'Mixed challenge',
-    questions: [
-      {
-        q: 'Mia usually ___ jeans, but today she ___ a dress.',
-        options: ['wears / is wearing', 'is wearing / wears', 'wear / wearing'],
-        answer: 0,
-        hint: 'Contrasta un hàbit amb una situació d’avui.',
-        explanation: 'Usually → Present Simple: wears. Today → Present Continuous: is wearing.'
-      },
-      {
-        q: 'Your brother likes this band, ___?',
-        options: ['isn’t he', 'doesn’t he', 'does he'],
-        answer: 1,
-        hint: 'Likes és Present Simple i la frase és afirmativa.',
-        explanation: 'Amb Present Simple i he fem servir does en negatiu: doesn’t he?'
-      },
-      {
-        q: 'In the film, the main character ___ a message and ___ to London.',
-        options: ['receives / travels', 'is receiving / is travelling', 'receive / travel'],
-        answer: 0,
-        hint: 'Estàs resumint la trama d’una pel·lícula.',
-        explanation: 'La trama s’explica en Present Simple: receives / travels.'
-      },
-      {
-        q: 'I ___ about buying a new backpack.',
-        options: ['think', 'am thinking', 'thinks'],
-        answer: 1,
-        hint: 'Aquí think significa que estàs considerant una possibilitat.',
-        explanation: 'Quan think és una activitat mental en curs, podem dir I’m thinking about...'
-      },
-      {
-        q: 'They will come with us, ___?',
-        options: ['will they', 'won’t they', 'don’t they'],
-        answer: 1,
-        hint: 'La frase és afirmativa i ja té l’auxiliar will.',
-        explanation: 'Reutilitzem will en forma negativa i they es manté: won’t they?'
-      },
-      {
-        q: 'My brother isn’t studying now, ___?',
-        options: ['is he', 'isn’t he', 'does he'],
-        answer: 0,
-        hint: 'La frase és negativa i l’auxiliar és is.',
-        explanation: 'Frase negativa → tag afirmativa. Reutilitzem is i brother = he: is he?'
-      }
-    ]
-  }
+const questions={
+  1:[
+    {q:"My brother ___ football every Saturday.",o:["plays","is playing","play"],a:0,h:"Every Saturday indica una rutina.",e:"Fem servir Present Simple per als hàbits. Amb he/she/it afegim -s: plays."},
+    {q:"Look! The dog ___ in the garden.",o:["runs","is running","run"],a:1,h:"Look! ens diu que passa ara mateix.",e:"Una acció en progrés ara porta am/is/are + verb-ing: is running."},
+    {q:"Laura is your teacher, ___?",o:["is she","isn't she","doesn't she"],a:1,h:"La frase és afirmativa; la tag ha de ser negativa.",e:"Repetim l'auxiliar is en negatiu i Laura es converteix en she: isn't she?"},
+    {q:"I ___ chocolate. (general preference)",o:["am loving","love","loving"],a:1,h:"Love expressa un gust, no una acció.",e:"Love és un stative verb i normalment no s'utilitza en Continuous."},
+    {q:"Marta and Leo ___ TV at the moment.",o:["watch","watches","are watching"],a:2,h:"At the moment vol dir ara mateix.",e:"Amb un subjecte plural fem servir are + verb-ing: are watching."},
+    {q:"Tom can swim, ___?",o:["can't he","can he","doesn't he"],a:0,h:"La frase és afirmativa i ja té l'auxiliar can.",e:"Repetim can en negatiu i Tom es converteix en he: can't he?"}
+  ],
+  2:[
+    {q:"We usually ___ at home, but today we ___ out.",o:["eat / are eating","are eating / eat","eat / eat"],a:0,h:"Una part és rutina; l'altra és una situació temporal d'avui.",e:"Usually → Present Simple (eat). Today, en aquest contrast → Present Continuous (are eating)."},
+    {q:"She doesn't understand the question, ___?",o:["doesn't she","is she","does she"],a:2,h:"La frase és negativa i l'auxiliar és does.",e:"La tag canvia a afirmativa i conserva l'auxiliar i el pronom: does she?"},
+    {q:"Why ___ you ___ at me right now?",o:["do / look","are / looking","are / look"],a:1,h:"Right now demana Continuous.",e:"Present Continuous interrogatiu: are + subject + verb-ing."},
+    {q:"Which sentence is correct?",o:["I'm knowing her name.","I know her name.","I am know her name."],a:1,h:"Know és un verb de la ment.",e:"Know és stative: fem servir Present Simple, I know."},
+    {q:"My friends ___ to school by bus every morning.",o:["are going","go","goes"],a:1,h:"Every morning expressa una rutina.",e:"Present Simple amb subjecte plural: my friends go."},
+    {q:"It isn't raining now, ___?",o:["is it","isn't it","does it"],a:0,h:"La frase és negativa; la tag serà afirmativa.",e:"Conservem l'auxiliar is i canviem el signe: is it?"}
+  ],
+  3:[
+    {q:"Choose the best option: I ___ this soup to check if it needs salt.",o:["taste","am tasting","tastes"],a:1,h:"Aquí taste és una acció voluntària que passa ara.",e:"Alguns stative verbs canvien de significat. Am tasting = estic tastant; tastes = té gust."},
+    {q:"Nobody called while I was out, ___?",o:["did they","didn't they","was I"],a:0,h:"Nobody té sentit negatiu. El pronom habitual és they.",e:"Com que nobody ja és negatiu, la tag és afirmativa: did they?"},
+    {q:"Your parents have got the tickets, ___?",o:["don't they","haven't they","have they"],a:1,h:"Copia l'auxiliar de have got i canvia'n el signe.",e:"Frase afirmativa amb have got → tag negativa haven't; your parents → they."},
+    {q:"Which pair shows a change of meaning correctly?",o:["I think it's good / I'm thinking about it","I am having a car / I have lunch now","I see your point / I am seeing the mountain"],a:0,h:"Think pot significar opinió o procés mental.",e:"I think = és la meva opinió. I'm thinking = hi estic reflexionant ara."},
+    {q:"Everyone enjoyed the trip, ___?",o:["didn't they","did he","didn't everyone"],a:0,h:"Everyone se substitueix normalment per they a la tag.",e:"La frase és afirmativa en passat: auxiliar did en negatiu + they → didn't they?"},
+    {q:"This week I ___ at my aunt's house, but I normally ___ at home.",o:["stay / am living","am staying / live","stay / live"],a:1,h:"This week és temporal; normally és habitual.",e:"Situació temporal: am staying. Rutina o situació habitual: live."}
+  ]
 };
 
-let activeSet = 'contrast';
-let questionIndex = 0;
-let score = 0;
-let answered = false;
+let level=1,index=0,score=0,answered=false;
+const quiz=document.querySelector('#quiz');
+const tabs=document.querySelectorAll('.tab');
 
-const quiz = document.querySelector('#quiz');
-const tabs = document.querySelectorAll('.practice-tab');
-
-function storageKey(setName) {
-  return `english2eso-unit2-best-${setName}`;
-}
-
-function updateBestScores() {
-  Object.keys(questionSets).forEach((setName) => {
-    const target = document.querySelector(`#best-${setName}`);
-    if (!target) return;
-    const total = questionSets[setName].questions.length;
-    const best = Number(localStorage.getItem(storageKey(setName)) || 0);
-    target.textContent = `${best}/${total}`;
-  });
-}
-
-function renderQuiz() {
-  if (!quiz) return;
-
-  const set = questionSets[activeSet];
-  const list = set.questions;
-
-  if (questionIndex >= list.length) {
-    const previousBest = Number(localStorage.getItem(storageKey(activeSet)) || 0);
-    const best = Math.max(previousBest, score);
-    localStorage.setItem(storageKey(activeSet), best);
-    updateBestScores();
-
-    let message = 'Repassa les explicacions marcades pels teus errors i torna-ho a provar.';
-    if (score === list.length) message = 'Molt bona feina. Has resolt tot el bloc correctament.';
-    else if (score >= 4) message = 'Bon resultat. Revisa els errors abans de passar al bloc següent.';
-
-    quiz.innerHTML = `
-      <div class="quiz-meta"><span>${set.label} completat</span><b>${score}/${list.length}</b></div>
-      <div class="quiz-finish">
-        <h3>${message}</h3>
-        <p>La teva millor marca en aquest bloc és <strong>${best}/${list.length}</strong>.</p>
-        <button class="next-btn" id="restart" type="button">Torna a començar aquest bloc</button>
-      </div>`;
-
-    document.querySelector('#restart').addEventListener('click', () => {
-      questionIndex = 0;
-      score = 0;
-      renderQuiz();
-    });
-    return;
+function render(){
+  const list=questions[level];
+  if(index>=list.length){
+    const message=score===list.length?'Excel·lent! Ho domines. 🌟':score>=list.length/2?'Molt bé! Revisa les explicacions i prova el nivell següent.':'Bon intent! Torna a mirar les targetes i repeteix sense pressa.';
+    const best=Math.max(score,Number(localStorage.getItem(`english2eso-best-${level}`)||0));
+    localStorage.setItem(`english2eso-best-${level}`,best);updateScores();
+    quiz.innerHTML=`<div class="quiz-top"><span>Nivell ${level} completat</span><span>${score}/${list.length}</span></div><h3 class="question">${message}</h3><p>Has encertat ${score} de ${list.length} preguntes. Millor marca: <b>${best}/${list.length}</b>.</p><div class="quiz-actions"><button class="next-btn" id="restart">Torna-ho a provar</button></div>`;
+    document.querySelector('#restart').onclick=()=>{index=0;score=0;render()};return;
   }
-
-  const item = list[questionIndex];
-  answered = false;
-  const progress = Math.round((questionIndex / list.length) * 100);
-
-  quiz.innerHTML = `
-    <div class="quiz-meta"><span>${set.label} - pregunta ${questionIndex + 1} de ${list.length}</span><b>${score} punts</b></div>
-    <div class="quiz-progress" aria-hidden="true"><span style="width:${progress}%"></span></div>
-    <h3 class="quiz-question">${item.q}</h3>
-    <div class="quiz-options">
-      ${item.options.map((option, index) => `<button class="quiz-option" type="button" data-option="${index}">${option}</button>`).join('')}
-    </div>
-    <div id="feedback" class="quiz-feedback-slot"></div>
-    <div class="quiz-actions">
-      <button class="hint-btn" id="hint" type="button">Mostra una pista</button>
-    </div>`;
-
-  document.querySelectorAll('.quiz-option').forEach((button) => {
-    button.addEventListener('click', () => answerQuestion(Number(button.dataset.option)));
-  });
-
-  document.querySelector('#hint').addEventListener('click', (event) => {
-    document.querySelector('#feedback').innerHTML = `<div class="quiz-feedback hint"><b>Pista</b><p>${item.hint}</p></div>`;
-    event.currentTarget.disabled = true;
-  });
+  const item=list[index];answered=false;
+  quiz.innerHTML=`<div class="quiz-top"><span>Pregunta ${index+1} de ${list.length}</span><span>Puntuació: ${score}</span></div><div class="progress"><i style="width:${index/list.length*100}%"></i></div><h3 class="question">${item.q}</h3><div class="options">${item.o.map((x,i)=>`<button class="option" data-i="${i}">${x}</button>`).join('')}</div><div id="message"></div><div class="quiz-actions"><button class="hint-btn" id="hint">Necessito una pista</button></div>`;
+  document.querySelectorAll('.option').forEach(btn=>btn.onclick=()=>answer(Number(btn.dataset.i)));
+  document.querySelector('#hint').onclick=()=>{document.querySelector('#message').innerHTML=`<div class="feedback"><b>Pista:</b> ${item.h}</div>`};
 }
 
-function answerQuestion(choice) {
-  if (answered) return;
-  answered = true;
-
-  const item = questionSets[activeSet].questions[questionIndex];
-  const isCorrect = choice === item.answer;
-
-  document.querySelectorAll('.quiz-option').forEach((button, index) => {
-    button.disabled = true;
-    if (index === item.answer) button.classList.add('correct');
-    if (index === choice && index !== item.answer) button.classList.add('wrong');
-  });
-
-  if (isCorrect) score += 1;
-
-  document.querySelector('#feedback').innerHTML = `
-    <div class="quiz-feedback ${isCorrect ? 'success' : 'error'}">
-      <b>${isCorrect ? 'Correcte ✓' : 'Revisa-ho'}</b>
-      <p>${item.explanation}</p>
-    </div>`;
-
-  document.querySelector('.quiz-actions').innerHTML = '<button class="next-btn" id="next" type="button">Següent pregunta →</button>';
-  document.querySelector('#next').addEventListener('click', () => {
-    questionIndex += 1;
-    renderQuiz();
-  });
+function answer(choice){
+  if(answered)return;answered=true;const item=questions[level][index];
+  document.querySelectorAll('.option').forEach((b,i)=>{b.disabled=true;if(i===item.a)b.classList.add('correct');if(i===choice&&i!==item.a)b.classList.add('wrong')});
+  if(choice===item.a)score++;
+  document.querySelector('#message').innerHTML=`<div class="feedback"><b>${choice===item.a?'Correcte! ✓':'Encara no.'}</b> ${item.e}</div>`;
+  document.querySelector('.quiz-actions').innerHTML='<button class="next-btn" id="next">Següent pregunta →</button>';
+  document.querySelector('#next').onclick=()=>{index++;render()};
 }
 
-function selectSet(setName, selectedTab) {
-  activeSet = setName;
-  questionIndex = 0;
-  score = 0;
-
-  tabs.forEach((tab) => {
-    const selected = tab === selectedTab;
-    tab.classList.toggle('active', selected);
-    tab.setAttribute('aria-selected', String(selected));
-  });
-
-  renderQuiz();
-}
-
-tabs.forEach((tab) => {
-  tab.addEventListener('click', () => selectSet(tab.dataset.set, tab));
-});
-
-const printButton = document.querySelector('#print-page');
-if (printButton) printButton.addEventListener('click', () => window.print());
-
-updateBestScores();
-renderQuiz();
+tabs.forEach(tab=>tab.onclick=()=>{tabs.forEach(t=>t.classList.remove('active'));tab.classList.add('active');level=Number(tab.dataset.level);index=0;score=0;render()});
+function updateScores(){[1,2,3].forEach(n=>{document.querySelector(`#best-${n}`).textContent=`${localStorage.getItem(`english2eso-best-${n}`)||0}/${questions[n].length}`})}
+document.querySelector('#print-page').onclick=()=>window.print();
+updateScores();
+render();
