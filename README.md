@@ -1,8 +1,14 @@
 # English2ESO · Unit 2
 
-Pàgina web estàtica de repàs de gramàtica anglesa per a alumnat de 2n d'ESO.
+Pàgina web estàtica de repàs de gramàtica anglesa per a alumnat de 2n d'ESO, estructurada com un curs de vuit unitats.
 
-## Continguts
+## Estructura
+
+- `index.html`: portada i índex de les vuit unitats
+- `unit-2.html`: recursos interactius de la Unit 2
+- `styles.css` i `app.js`: estils i interactivitat compartits
+
+## Unit 2
 
 - Present Simple vs Present Continuous
 - Stative verbs
